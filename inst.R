@@ -1,0 +1,6 @@
+library(reconstructr)
+library(WMUtils)
+library(Rcpp)
+ignore <- lapply(list.files(file.path(getwd(),"R"),full.names = TRUE),source)
+ignore <- lapply(list.files(file.path(getwd(),"src"),full.names = TRUE),sourceCpp)
+rm(ignore)
